@@ -1,21 +1,16 @@
 <script setup lang="ts">
-defineProps({
-  size: {
-    type: Number,
-    default: 16,
-  },
-  radius: {
-    type: Number,
-    default: 1,
-  },
-  offsetX: {
-    type: Number,
-    default: 0,
-  },
-  offsetY: {
-    type: Number,
-    default: 0,
-  },
+interface Props {
+  size?: number
+  radius?: number
+  offsetX?: number
+  offsetY?: number
+}
+
+withDefaults(defineProps<Props>(), {
+  size: 16,
+  radius: 1,
+  offsetX: 0,
+  offsetY: 0,
 })
 </script>
 

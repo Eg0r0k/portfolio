@@ -1,38 +1,34 @@
 {
   "title": "FAQ",
-  "subtitle": "Things I get asked a lot",
+  "subtitle": "Frequently asked questions",
   "faqQuestions": [
     {
-      "title": "Services",
+      "title": "Development",
       "questions": [
         {
-          "label": "What services do you offer?",
-          "content": "I offer a range of services including web design, web development, branding, and photography. I can also help with SEO and social media marketing."
+          "label": "What do I actually do?",
+          "content": "I’m a frontend developer specializing in high-performance, visually expressive web applications using Vue 3, Nuxt, TypeScript, and modern tools like Three.js, WebGL, and SVG. I actively participate in hackathons and programming competitions."
         },
         {
-          "label": "Can you teach me how to make a website?",
-          "content": "I don't offer courses at the moment, but I can recommend resources and advice to help you get the most out of your learning."
+          "label": "Can you help me learn?",
+          "content": "I don’t offer formal courses, but I’m happy to share useful resources, architectural advice, or help troubleshoot specific technical challenges—especially those involving Vue, Nuxt, or visual effects."
         }
       ]
     },
     {
-      "title": "Pricing",
+      "title": "Collaboration",
       "questions": [
         {
-          "label": "How much does a project cost?",
-          "content": "The cost of a project depends on many factors, such as the size of the project, the features, the development time, etc. The initial amount of my web services starts at 2000€, with an average between 3000€ and 10000€. For any other design or consulting service, I usually charge 450€ per day."
+          "label": "How does collaboration work?",
+          "content": "I work as an independent developer. Collaboration can be one-off (e.g., implementing a complex interactive feature) or long-term—within a team or during a hackathon."
         },
         {
-          "label": "How does payment work for a project?",
-          "content": "I ask for a 40% deposit before starting a project, and the remaining 60% after successful delivery. I accept payments by bank transfer, PayPal, etc..."
-        },
-        {
-          "label": "How long does a project take?",
-          "content": "It's difficult to give an exact estimate, as each project is different, but the majority of my past work has taken between 2 weeks and 2 months."
+          "label": "How long does a task take?",
+          "content": "Simple components or effects take a few hours to a couple of days. Full projects (e.g., a landing page with custom animations) typically take one to four weeks."
         },
         {
           "label": "Do you offer discounts?",
-          "content": "I offer a 15% discount for students and non-profit organizations."
+          "content": "I’m open to flexible terms for educational initiatives, student projects, and non-profit teams."
         }
       ]
     },
@@ -40,12 +36,12 @@
       "title": "Personal",
       "questions": [
         {
-          "label": "What do you enjoy most about this work?",
-          "content": "I love learning new things and being able to create just about anything from scratch, creating beautiful things that people will use and appreciate."
+          "label": "What inspires you in development?",
+          "content": "The ability to build complex, beautiful, and fast interfaces from pure code. I’m especially drawn to challenges where frontend meets graphics, animation, or real-time rendering—like visualizations, shaders, and WebGL."
         },
         {
-          "label": "Hobbies outside of work?",
-          "content": "I love what I do, so I usually spend a lot of time working on personal projects, photography, etc. I'm also a big sports fan. I often go to the gym and I recently started climbing!"
+          "label": "What do you do outside of coding?",
+          "content": "I take part in hackathons, experiment with new APIs, and follow trends in web graphics. I’m also passionate about sports—I regularly hit the gym."
         }
       ]
     }

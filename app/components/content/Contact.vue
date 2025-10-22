@@ -67,7 +67,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <UForm
         :state
         :schema
-        class="flex w-full max-w-[40rem] flex-col gap-3"
+        class="flex w-full max-w-160 flex-col gap-3"
         @submit="onSubmit"
       >
         <UFormField
@@ -155,13 +155,13 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         <div class="flex flex-col gap-3">
           <dd class="flex items-center gap-3 text-neutral-400">
             <UIcon
-              name="heroicons-phone"
+              name="ic:outline-telegram"
               class="size-6"
               aria-hidden="true"
             />
-            <span>
-              {{ profile.phone }}
-            </span>
+            <NuxtLink :to="`https://t.me/${profile.telegram}`">
+              @{{ profile.telegram }}
+            </NuxtLink>
           </dd>
           <dd class="flex items-center gap-3 text-neutral-400">
             <UIcon

@@ -49,12 +49,12 @@ export default defineNuxtSchema({
           icon: 'lucide:mail',
           default: 'contact@hrcd.fr',
         }),
-        phone: field({
+        telegram: field({
           type: 'string',
           title: 'Phone',
           description: 'Your phone.',
           icon: 'lucide:phone',
-          default: '(+33) 6 21 56 22 18',
+          default: '@',
         }),
         picture: field({
           type: 'string',
@@ -127,12 +127,12 @@ export default defineNuxtSchema({
           icon: 'lucide:linkedin',
           default: 'https://www.linkedin.com/in/myusername',
         }),
-        instagram: field({
+        telegram: field({
           type: 'string',
-          title: 'Instagram',
-          description: 'Your Instagram account.',
-          icon: 'lucide:instagram',
-          default: 'https://www.instagram.com/myusername',
+          title: 'Telegram',
+          description: 'Your telegram account.',
+          icon: 'bx:bxl-telegram',
+          default: 'https://t.me/',
         }),
         spotify: field({
           type: 'string',

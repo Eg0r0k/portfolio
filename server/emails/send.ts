@@ -8,19 +8,19 @@ export default defineEventHandler(async (event: H3Event) => {
     const body = (await readBody(event))
     const { email, subject, message, phone, fullname } = body
     return await resend.emails.send({
-      from: 'HR Folio <contact@hrcd.fr>',
-      to: ['contact@hrcd.fr'],
-      subject: 'Nouveau message de HR Folio',
+      from: 'HR <lambdawork1n@gmail.com>',
+      to: ['lambdawork1n@gmail.com'],
+      subject: `Новое сообщение от ${fullname}`,
       html: `
-      <p>Un nouveau message a été envoyé depuis le formulaire de contact de HR Folio.</p>
-      <p>Voici les détails du message :</p>
-      <ul>
-        <li>Nom : ${fullname}</li>
-        <li>Email : ${email}</li>
-        <li>Téléphone : ${phone}</li>
-        <li>Sujet : ${subject}</li>
-        <li>Message : ${message}</li>
-      </ul>
+        <p>Получено новое сообщение через форму контактов на сайте.</p>
+        <p><strong>Детали:</strong></p>
+        <ul>
+          <li><strong>Имя:</strong> ${fullname}</li>
+          <li><strong>Email:</strong> ${email}</li>
+          <li><strong>Телефон:</strong> ${phone || '—'}</li>
+          <li><strong>Тема:</strong> ${subject || '—'}</li>
+          <li><strong>Сообщение:</strong><br>${message.replace(/\n/g, '<br>')}</li>
+        </ul>
       `,
     })
   }

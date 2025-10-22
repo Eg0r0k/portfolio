@@ -8,7 +8,7 @@ const { locale } = useI18n()
 const slug = computed(() => withLeadingSlash(String(route.params.slug)))
 const { data: faq } = await useAsyncData('faq-' + slug.value, async () => {
   const collection = ('faq_' + locale.value) as keyof Collections
-  return await queryCollection(collection).first() as Collections['faq_en'] | Collections['faq_fr']
+  return await queryCollection(collection).first() as Collections['faq_en'] | Collections['faq_ru']
 }, {
   watch: [locale],
 })
@@ -41,8 +41,9 @@ const ui = {
 <template>
   <div class="flex flex-col items-center justify-center space-y-8 w-full sm:px-20 md:px-30">
     <div class="flex flex-col items-center justify-center gap-2">
-      <h3 class="font-newsreader italic text-white-shadow text-4xl">
+      <h3 class="font-newsreader inline-flex items-center gap-2 italic text-white-shadow text-4xl">
         {{ faq!.title }}
+        <Lottie name="Moai" :loop="false" width="50px"  />
       </h3>
       <p class="text-center text-sm font-medium text-muted">
         {{ faq!.subtitle }}

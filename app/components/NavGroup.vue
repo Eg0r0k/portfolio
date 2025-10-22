@@ -1,21 +1,16 @@
 <script setup lang="ts">
-const props = defineProps({
-  as: {
-    type: String,
-    default: 'div',
-  },
-  duration: {
-    type: Number,
-    default: 500,
-  },
-  vertical: {
-    type: Boolean,
-    default: false,
-  },
-  fluid: {
-    type: Boolean,
-    default: false,
-  },
+interface Props {
+  as?: string
+  duration?: number
+  vertical?: boolean
+  fluid?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  as: 'nav',
+  duration: 500,
+  vertical: false,
+  fluid: false,
 })
 
 const isReady = ref(false)
@@ -30,7 +25,7 @@ let previousSize = -1
 let previousPosition = 0
 let animated = true
 
-function handleFluidMove(targetSize, targetPosition) {
+const handleFluidMove = (targetSize: number, targetPosition: number): void => {
   if (!animated) {
     return
   }
@@ -70,7 +65,7 @@ function handleFluidMove(targetSize, targetPosition) {
   previousPosition = targetPosition
 }
 
-function setActiveItem(index, size, position) {
+const setActiveItem = (index: number, size: number, position: number): void => {
   activeItem.index = index
 
   if (props.fluid) {

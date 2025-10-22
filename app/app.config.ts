@@ -4,27 +4,27 @@ export default defineAppConfig({
     available: true,
   },
   profile: {
-    name: 'Hugo Richard',
-    job: 'Frontend Architect and Designer',
-    email: 'contact@hrcd.fr',
-    phone: '(+33) 6 21 56 22 18',
-    picture: 'https://avatars.githubusercontent.com/u/71938701?v=4',
+    name: 'Egor Bocharov',
+    job: 'Frontend Developer',
+    email: 'lambdawork1n@gmail.com',
+    telegram: 'EG0RK13',
+    picture: 'https://avatars.githubusercontent.com/u/123271525?v=4',
   },
   socials: {
-    github: 'https://github.com/HugoRCD',
+    github: 'https://github.com/Eg0r0k',
     twitter: 'https://twitter.com/HugoRCD__',
     linkedin: 'https://www.linkedin.com/in/hugo-richard-0801',
-    instagram: 'https://www.instagram.com/hugo.rcd_',
+    telegram: 'https://t.me/EGORK13',
     spotify: 'https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4',
   },
   seo: {
     title: 'Canvas a Nuxt portfolio template',
-    description: 'Canvas is a simple but beautiful portfolio template for designers and developers built with Nuxt and Tailwind CSS. Made with ❤️ by HugoRCD',
+    description: 'My way',
     url: 'https://canvas.hrcd.fr',
   },
   ui: {
     colors: {
-      primary: 'emerald',
+      primary: 'amber',
       neutral: 'neutral',
     },
     notifications: {

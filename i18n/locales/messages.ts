@@ -1,14 +1,14 @@
 import en_navigation from './en/navigation.json'
-import fr_navigation from './fr/navigation.json'
+import ru_navigation from './ru/navigation.json'
 
 import en_contact from './en/contact.json'
-import fr_contact from './fr/contact.json'
+import ru_contact from './ru/contact.json'
 
 import en_global from './en/global.json'
-import fr_global from './fr/global.json'
+import ru_global from './ru/global.json'
 
 import en_writing from './en/writing.json'
-import fr_writing from './fr/writing.json'
+import ru_writing from './ru/writing.json'
 
 const messages = {
   en: {
@@ -17,11 +17,11 @@ const messages = {
     global: en_global,
     writing: en_writing,
   },
-  fr: {
-    navigation: fr_navigation,
-    contact: fr_contact,
-    global: fr_global,
-    writing: fr_writing,
+  ru: {
+    navigation: ru_navigation,
+    contact: ru_contact,
+    global: ru_global,
+    writing: ru_writing,
   },
 }
 

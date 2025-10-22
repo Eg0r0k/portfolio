@@ -11,7 +11,6 @@
 
       <!-- profile picture -->
       <HomeProfilePicture />
-
       <div class="z-20 flex flex-col items-center justify-center">
         <!-- title -->
         <div

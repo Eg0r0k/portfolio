@@ -44,6 +44,10 @@ Le temps joue un rôle crucial dans ce débat. L'efficacité temporelle, soulign
 
 Contrôler entièrement le processus de création offre un sentiment d'autonomie et d'empowerment. Cependant, il est vital de ne pas confondre contrôle avec rigidité. Être ouvert aux évolutions du marché et aux nouvelles tendances est tout aussi essentiel que le contrôle personnel. C'est un équilibre délicat entre autonomie et adaptabilité.
 
+```js
+ const let = 1;
+```
+
 ### L'équilibre délicat : un voyage continu de découverte et d'adaptation
 
 En fin de compte, la création du portfolio est un voyage continu. C'est naviguer dans ce paradoxe avec intention. C'est trouver un équilibre entre la quête de l'excellence et la nécessité d'agir rapidement, sachant que chaque itération est une progression vers une version améliorée de soi-même. Créer un portfolio, c'est embrasser le paradoxe, c'est choisir consciemment entre perfection et rapidité, et c'est accepter que le chemin vers l'excellence est un voyage plutôt qu'une destination.

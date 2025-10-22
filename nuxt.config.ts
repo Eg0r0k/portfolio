@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     'vue-sonner/nuxt',
+    'nuxt-lottie',
   ],
 
   imports: {
@@ -77,7 +78,7 @@ export default defineNuxtConfig({
     prerender: {
       autoSubfolderIndex: false,
       crawlLinks: true,
-      routes: ['/en', '/fr'],
+      routes: ['/en', '/ru'],
     },
   },
 
@@ -96,7 +97,7 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       { code: 'en', name: 'English', language: 'en-US' },
-      { code: 'fr', name: 'French', language: 'fr-FR' },
+      { code: 'ru', name: 'Russian', language: 'ru-RU' },
     ],
     detectBrowserLanguage: {
       useCookie: true,

@@ -3,7 +3,7 @@ const stack = await queryCollection('stack').first()
 </script>
 
 <template>
-  <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20 text-[var(--ui-text-toned)]">
+  <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20 text-toned">
     <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
       <slot
         name="title"
