@@ -9,8 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     'vue-sonner/nuxt',
     'nuxt-lottie',
+    '@nuxt/fonts',
   ],
-
   imports: {
     presets: [
       {
@@ -31,7 +31,6 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     indexable: true,
   },
-
   colorMode: {
     preference: 'dark',
     fallback: 'dark',
@@ -64,7 +63,6 @@ export default defineNuxtConfig({
     // Needed to activate preview on Nuxt Studio
     '/': { prerender: false },
   },
-
   experimental: {
     viewTransition: true,
   },
@@ -126,3 +124,4 @@ export default defineNuxtConfig({
     zeroRuntime: true,
   },
 })
+  

@@ -1,37 +1,43 @@
 <script setup lang="ts">
-const socialMediaRegexMap = [
-  { regex: /github\.com/, name: 'GitHub', icon: 'custom:github' },
-  { regex: /twitter\.com/, name: 'X / Twitter', icon: 'custom:x' },
-  { regex: /linkedin\.com/, name: 'LinkedIn', icon: 'custom:linkedin' },
-  { regex: /spotify\.com/, name: 'Spotify', icon: 'custom:spotify' },
-  { regex: /t\.me/, name: 'Telegram', icon: 'bx:bxl-telegram' },
+// Маппинг соцсетей — только те, что нужны (можно расширить)
+const socialMediaMap = [
+  { regex: /github\.com/i, icon: 'custom:github' },
+  { regex: /x\.com|twitter\.com/i, icon: 'custom:x' },
+  { regex: /linkedin\.com/i, icon: 'custom:linkedin' },
+  { regex: /spotify\.com/i, icon: 'custom:spotify' },
+  { regex: /t\.me|telegram\.org/i, icon: 'bx:bxl-telegram' },
 ]
 
+// Получаем ссылки из app.config
 const { socials } = useAppConfig()
-const mappedSocials = Object.values(socials).map((link) => {
-  const foundSocial = socialMediaRegexMap.find(social => social.regex.test(link))
-  if (!foundSocial) throw new Error(`No social media found for link: ${link}`)
-  const { name, icon } = foundSocial
-  return { name, link, icon }
+
+// Берём первые 4 значения (гарантируем длину = 4)
+const socialLinks = Object.values(socials).slice(0, 4)
+
+// Валидация: если меньше 4 — кидаем ошибку (или можно заполнить заглушками)
+if (socialLinks.length < 4) {
+  throw new Error(
+    `Expected 4 social links in app.config, but got ${socialLinks.length}.`
+  )
+}
+
+// Маппинг: URL → иконка
+const mappedSocials = socialLinks.map(link => {
+  const match = socialMediaMap.find(({ regex }) => regex.test(link))
+  if (!match) {
+    console.warn(`Unknown social link: ${link}. Using fallback icon.`)
+    return { link, icon: 'bx:bx-link' }
+  }
+  return { link, icon: match.icon }
 })
 </script>
 
 <template>
-  <div class="my-7 flex items-center justify-center gap-6 sm:gap-10">
-    <NuxtLink
-      v-for="social in mappedSocials"
-      :key="social.name"
-      :to="social.link"
-      target="_blank"
-      class="flex items-center justify-center"
-      :aria-label="'Go to ' + social.name + ' profile'"
-    >
-      <UIcon
-        :name="social.icon"
-        class="size-6 text-muted transition-all duration-300 hover:text-neutral-300"
-        :alt="social.name + ' logo'"
-        :aria-label="social.name + ' logo'"
-      />
-    </NuxtLink>
-  </div>
+  <HomeCard variant="secondary" class="col-span-2 row-span-2 aspect-square grid grid-cols-2 grid-rows-2 gap-4">
+    <a v-for="(social, index) in mappedSocials" :key="index" :href="social.link" target="_blank"
+      rel="noopener noreferrer"
+      class="border rounded-full flex items-center justify-center transition-colors hover:bg-muted-foreground/5">
+      <UIcon :name="social.icon" class="size-8" />
+    </a>
+  </HomeCard>
 </template>

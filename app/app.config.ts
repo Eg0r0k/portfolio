@@ -18,14 +18,15 @@ export default defineAppConfig({
     spotify: 'https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4',
   },
   seo: {
-    title: 'Canvas a Nuxt portfolio template',
+    title: 'Eg0r0k\'s portfolio',
     description: 'My way',
     url: 'https://canvas.hrcd.fr',
   },
   ui: {
     colors: {
-      primary: 'amber',
+      primary: 'orange',
       neutral: 'neutral',
+      error: 'red',
     },
     notifications: {
       position: 'top-0 bottom-auto',
@@ -40,9 +41,9 @@ export default defineAppConfig({
       slots: {
         base: 'cursor-pointer',
       },
-      defaultVariants: {
-        color: 'neutral',
-      },
+      // defaultVariants: {
+      //   color: 'neutral',
+      // },
     },
     input: {
       defaultVariants: {

@@ -33,10 +33,10 @@ defineShortcuts({
 
 <template>
   <div v-if="page">
-    <FolioMeta
+    <!-- <FolioMeta
       :page
       :is-writing="route.path.includes('/articles/')"
-    />
+    /> -->
     <ContentRenderer
       :dir="localeProperties?.dir ?? 'ltr'"
       :value="page"
