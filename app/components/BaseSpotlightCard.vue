@@ -26,17 +26,23 @@ const spotlightColorStops = [props.from, props.via, props.to].filter(value => !!
 </script>
 
 <template>
-  <component :is="as" ref="card" :style="{
-    '--x': `${elementX}px`,
-    '--y': `${elementY}px`,
-    '--spotlight-color-stops': spotlightColorStops,
-    '--spotlight-size': `${size}px`,
-  }" :class="{
-    'before:absolute before:inset-0 before:bg-[radial-gradient(var(--spotlight-size)_circle_at_var(--x)_var(--y),var(--spotlight-color-stops))]':
-      mode === 'before',
-    'after:absolute after:inset-0 after:bg-[radial-gradient(var(--spotlight-size)_circle_at_var(--x)_var(--y),var(--spotlight-color-stops))]':
-      mode === 'after',
-  }" class="relative transform-gpu overflow-hidden">
+  <component
+    :is="as"
+    ref="card"
+    :style="{
+      '--x': `${elementX}px`,
+      '--y': `${elementY}px`,
+      '--spotlight-color-stops': spotlightColorStops,
+      '--spotlight-size': `${size}px`,
+    }"
+    :class="{
+      'before:absolute before:inset-0 before:bg-[radial-gradient(var(--spotlight-size)_circle_at_var(--x)_var(--y),var(--spotlight-color-stops))]':
+        mode === 'before',
+      'after:absolute after:inset-0 after:bg-[radial-gradient(var(--spotlight-size)_circle_at_var(--x)_var(--y),var(--spotlight-color-stops))]':
+        mode === 'after',
+    }"
+    class="relative transform-gpu overflow-hidden"
+  >
     <slot />
   </component>
 </template>

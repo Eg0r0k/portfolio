@@ -23,7 +23,7 @@ const stack = await queryCollection('stack').first()
         <h3 class="text-lg">
           Intro
         </h3>
-        <div class="flex flex-col gap-4 text-primary">
+        <div class="flex flex-col gap-4 text-highlighted">
           <slot
             name="intro"
             mdc-unwrap="p"

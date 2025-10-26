@@ -13,9 +13,8 @@ export default defineAppConfig({
   socials: {
     github: 'https://github.com/Eg0r0k',
     twitter: 'https://twitter.com/HugoRCD__',
-    linkedin: 'https://www.linkedin.com/in/hugo-richard-0801',
     telegram: 'https://t.me/EGORK13',
-    spotify: 'https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4',
+    spotify: 'https://open.spotify.com/user/31r6b5oz2ouj2zyerfaec3re6gq4',
   },
   seo: {
     title: 'Eg0r0k\'s portfolio',

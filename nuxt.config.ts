@@ -124,4 +124,3 @@ export default defineNuxtConfig({
     zeroRuntime: true,
   },
 })
-  

@@ -17,7 +17,7 @@ const items = computed(() => {
   return faq.value?.faqQuestions.map((faq) => {
     return {
       label: faq.title,
-      key: faq.title.toLowerCase(),
+      key: `faq-tab-${faq.title}`,
       questions: faq.questions,
     }
   })
@@ -48,14 +48,23 @@ const ui = {
         {{ faq!.subtitle }}
       </p>
     </div>
-    <UTabs :items orientation="horizontal" :ui>
+    <UTabs
+      :items
+      orientation="horizontal"
+      :ui
+    >
       <template #content="{ item }">
-        <UAccordion :unmount-on-hide="false" trailing-icon="lucide:plus" :items="item.questions" :ui="{
-          item: 'mb-2 group px-4 transform-gpu rounded-xl border border-white/10 bg-white/5 transition duration-500 will-change-transform hover:bg-white/[0.075]',
-          trailingIcon: 'group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-135',
-        }">
+        <UAccordion
+          :unmount-on-hide="false"
+          trailing-icon="lucide:plus"
+          :items="item.questions"
+          :ui="{
+            item: 'mb-2 group px-4 transform-gpu rounded-xl border border-white/10 bg-white/5 transition duration-500 will-change-transform hover:bg-white/[0.075]',
+            trailingIcon: 'group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-135',
+          }"
+        >
           <template #body="{ item: _item }">
-            <MDC :value="_item.content" unwrap="p" />
+            {{ _item.content }}
           </template>
         </UAccordion>
       </template>

@@ -25,7 +25,7 @@ const localePath = useLocalePath()
           :class="[
             localePath(item.to) === route.path
               ? 'text-shadow-sm shadow-[0_0_8px_0_var(--color-orange-400)]'
-              : 'hover:bg-elevated text-toned'
+              : 'hover:bg-elevated text-toned',
           ]"
         >
           <div class="bg-elevated p-1.5 flex items-center rounded-full">

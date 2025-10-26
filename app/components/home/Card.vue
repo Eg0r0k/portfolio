@@ -15,13 +15,13 @@ import { computed } from 'vue'
 
 const props = withDefaults(
   defineProps<{
-    variant?: 'primary' | 'secondary' | 'empty'
+    variant?: 'primary' | 'secondary' | 'empty' | 'cristal'
     size?: 'sm' | 'md' | 'lg'
   }>(),
   {
     variant: 'primary',
     size: 'md',
-  }
+  },
 )
 
 const paddingClass = computed(() =>
@@ -29,7 +29,7 @@ const paddingClass = computed(() =>
     sm: 'p-3',
     md: 'p-5',
     lg: 'p-6',
-  })[props.size]
+  })[props.size],
 )
 
 const variantClass = computed(() =>
@@ -37,6 +37,7 @@ const variantClass = computed(() =>
     primary: 'bg-primary',
     secondary: 'bg-muted',
     empty: 'bg-transparent',
-  })[props.variant]
+    cristal: 'bg-white text-black',
+  })[props.variant],
 )
 </script>

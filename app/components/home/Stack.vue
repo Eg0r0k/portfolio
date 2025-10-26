@@ -14,7 +14,10 @@ const moreCount = computed(() => totalItems.value - 4)
     style="--stagger: 2"
     data-animate
   >
-    <template v-for="(item, index) in displayedItems" :key="item.name">
+    <template
+      v-for="(item, index) in displayedItems"
+      :key="item.name"
+    >
       <div
         v-if="index < 4"
         class="bg-card rounded-lg flex items-center justify-center"

@@ -1,13 +1,27 @@
 <template>
   <div class="clock-container">
-    <div class="clock">
-      <div class="hand hour" :style="{ transform: `rotate(${hourAngle}deg)` }" />
-      <div class="hand minute" :style="{ transform: `rotate(${minuteAngle}deg)` }" />
-      <div class="hand second" :style="{ transform: `rotate(${secondAngle}deg)` }">
-        <div class="second-tip" />
+    <ClientOnly>
+      <div class="clock">
+        <div
+          class="hand hour"
+          :style="{ transform: `rotate(${hourAngle}deg)` }"
+        />
+        <div
+          class="hand minute"
+          :style="{ transform: `rotate(${minuteAngle}deg)` }"
+        />
+        <div
+          class="hand second"
+          :style="{ transform: `rotate(${secondAngle}deg)` }"
+        >
+          <div class="second-tip" />
+        </div>
+        <div class="center-dot" />
       </div>
-      <div class="center-dot" />
-    </div>
+      <template #fallback>
+        <USkeleton class="w-full h-full rounded-full" />
+      </template>
+    </ClientOnly>
   </div>
 </template>
 
@@ -34,16 +48,19 @@ const secondAngle = computed(() => {
   return s * 6 + ms * 0.006
 })
 
-let timer: ReturnType<typeof setTimeout>
+let timer: NodeJS.Timeout | null = null
 
 onMounted(() => {
+  now.value = new Date()
   timer = setInterval(() => {
     now.value = new Date()
   }, 1000)
 })
 
 onBeforeUnmount(() => {
-  clearInterval(timer)
+  if (timer) {
+    clearInterval(timer)
+  }
 })
 </script>
 
