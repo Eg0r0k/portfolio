@@ -20,17 +20,17 @@
       "link": "https://www.typescriptlang.org/",
       "icon": "custom:typescript"
     },
-        {
+    {
       "name": "Pinia",
       "link": "https://pinia.vuejs.org/",
       "icon": "custom:pinia"
     },
-      {
+    {
       "name": "TanStack Vue Query",
       "link": "https://tanstack.com/query/latest/docs/vue/overview",
       "icon": "custom:query"
     },
-        {
+    {
       "name": "i18n",
       "link": "https://vue-i18n.intlify.dev/",
       "icon": "custom:i18n"
@@ -40,7 +40,6 @@
       "link": "https://vercel.com/",
       "icon": "custom:vercel"
     },
-  
     {
       "name": "Notion",
       "link": "https://www.notion.so/",
