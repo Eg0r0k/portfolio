@@ -2,18 +2,9 @@
   <div class="clock-container">
     <ClientOnly>
       <div class="clock">
-        <div
-          class="hand hour"
-          :style="{ transform: `rotate(${hourAngle}deg)` }"
-        />
-        <div
-          class="hand minute"
-          :style="{ transform: `rotate(${minuteAngle}deg)` }"
-        />
-        <div
-          class="hand second"
-          :style="{ transform: `rotate(${secondAngle}deg)` }"
-        >
+        <div class="hand hour" :style="{ transform: `rotate(${hourAngle}deg)` }" />
+        <div class="hand minute" :style="{ transform: `rotate(${minuteAngle}deg)` }" />
+        <div class="hand second" :style="{ transform: `rotate(${secondAngle}deg)` }">
           <div class="second-tip" />
         </div>
         <div class="center-dot" />
@@ -83,38 +74,12 @@ onBeforeUnmount(() => {
   background: var(--ui-bg-muted);
 }
 
-/*.tick {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-origin: center;
-}
-
-.tick::before {
-  content: '';
-  position: absolute;
-  top: 4%;
-  left: 50%;
-  width: 1px;
-  height: 3%;
-  background: var(--ui-text);
-  transform: translateX(-50%);
-}
-
-.tick-major::before {
-  height: 5%;
-  width: 2px;
-  top: 3%;
-}*/
-
 .hand {
   position: absolute;
-  top: 50%;
+  bottom: 50%;
   left: 50%;
-  transform-origin: top center;
-  transform: translate(-50%, 0) rotate(0deg);
+  transform: translateX(-50%);
+  transform-origin: bottom center;
 }
 
 .hour {
